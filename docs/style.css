@@ -1,0 +1,266 @@
+:root {
+    --bg-color: #000;
+    --text-color: #00ff00;
+    --accent-color: #0f0;
+    --font: 'Courier New', Courier, monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font);
+    padding: 20px;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#preloader-text {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    animation: blink-text 1s steps(2, start) infinite;
+}
+
+@keyframes blink-text {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid var(--accent-color);
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+    display: inline-block;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--accent-color);
+    }
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-color);
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    border-left: 5px solid var(--accent-color);
+    padding-left: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.terminal-box {
+    background-color: #111;
+    padding: 20px;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.project {
+    margin-bottom: 15px;
+}
+
+.project-title {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid var(--accent-color);
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+
+.btn {
+    background: none;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+/* Стилі для плеєра */
+audio {
+    width: 100%;
+    /* Робимо плеєр на всю ширину */
+    height: 40px;
+    /* Висота плеєра */
+    background-color: var(--bg-color);
+    /* Чорний фон плеєра */
+    color: var(--text-color);
+    /* Текст яскраво-зелений */
+    border: 2px solid var(--accent-color);
+    /* Зелений контур плеєра */
+    border-radius: 10px;
+    /* Закруглення кутів */
+    font-family: var(--font);
+    /* Моноширинний шрифт */
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    /* Відступ знизу для плеєра */
+}
+
+/* Стилізація кнопок плеєра */
+audio::-webkit-media-controls-panel {
+    background-color: var(--bg-color);
+    /* Той самий чорний фон */
+    border-radius: 10px;
+    color: var(--text-color);
+    /* Текст плеєра зелений */
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider {
+    background-color: var(--accent-color);
+    /* Зелений для кнопок */
+    border-radius: 50%;
+    /* Кнопки круглі */
+}
+
+audio::-webkit-media-controls-play-button:hover {
+    background-color: #00cc00;
+    /* Світліший зелений при наведенні */
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: #444;
+    /* Колір слайдера */
+}
+
+audio::-webkit-media-controls-mute-button:hover {
+    background-color: #cc0000;
+    /* Червоний для кнопки mute при наведенні */
+}
+
+button {
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--bg-color);
+    font-family: var(--font);
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cc00;
+    /* Зміна кольору кнопки при наведенні */
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .terminal-box {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

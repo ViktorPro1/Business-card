@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viktor Pro | Портфоліо</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="preloader-text">LOADING...</div>
+    </div>
+
+    <audio id="audio" controls autoplay>
+        <source src="retroace_of_base_-_beautiful.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header>
+        <h1 class="typewriter">Viktor Pro</h1>
+        <p>Frontend-початківець | HTML / CSS / Git / Canva</p>
+    </header>
+
+    <nav>
+        <a href="#about">[Про мене]</a>
+        <a href="#projects">[Проєкти]</a>
+        <a href="#contact">[Контакти]</a>
+    </nav>
+
+    <section id="about">
+        <h2>Про мене</h2>
+        <div class="terminal-box">
+            <p>Привіт! Я фронтенд-початківець, який вивчає HTML, CSS, Git та дизайн у Canva.</p>
+            <p>Цей сайт — моя digital-візитка, зроблена в стилі ретро-терміналу.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Мої проєкти</h2>
+        <div class="terminal-box">
+            <div class="project">
+                <p class="project-title">WebStudio</p>
+                <p>Адаптивна верстка сайту студії за макетом. <br />
+                    <a href="#" target="_blank">[Live demo]</a> | <a href="#" target="_blank">[GitHub]</a>
+                </p>
+            </div>
+            <div class="project">
+                <p class="project-title">Planet Fatness</p>
+                <p>HTML-сторінка фітнес-клубу з унікальним дизайном. <br />
+                    <a href="#" target="_blank">[Live demo]</a> | <a href="#" target="_blank">[GitHub]</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Контакти</h2>
+        <div class="terminal-box">
+            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+            <p>Telegram: <a href="https://t.me/yourusername" target="_blank">@yourusername</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Viktor Pro. Усі права захищені.</p>
+    </footer>
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('preloader').style.display = 'none';
+        });
+    </script>
+
+</body>
+
+</html>
